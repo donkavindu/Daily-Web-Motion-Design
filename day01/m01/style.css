@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #222222;
+}
+.wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.container span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: animate 1.5s infinite ease-in-out;
+}
+.container span:nth-child(1){
+    background-color: #ff015b;
+    box-shadow: 0 0 20px #ff015b;
+    animation-delay: 0;
+}
+.container span:nth-child(2){
+    background-color: #8200ff;
+    box-shadow: 0 0 20px #8200ff;
+    animation-delay: 0.2s;
+}
+.container span:nth-child(3){
+    background-color: #00fe66;
+    box-shadow: 0 0 20px #00fe66;
+    animation-delay: 0.4s;
+}
+.container span:nth-child(4){
+    background-color: #0020ff;
+    box-shadow: 0 0 20px #0020ff;
+    animation-delay: 0.6s;
+}
+.container span:nth-child(5){
+    background-color: #fffd01;
+    box-shadow: 0 0 20px #fffd01;
+    animation-delay: 0.8s;
+}
+.container span:nth-child(6){
+    background-color: #32ff00;
+    box-shadow: 0 0 20px #32ff00;
+    animation-delay: 1s;
+}
+.container span:nth-child(7){
+    background-color: #ea4b21;
+    box-shadow: 0 0 20px #ea4b21;
+    animation-delay: 1.2s;
+}
+@keyframes animate{
+    0%,40%,100%{transform: scale(0.5);}
+    20%{transform: scale(1);}
+}
