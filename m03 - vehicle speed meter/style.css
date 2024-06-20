@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.wrapper{
+    position:relative;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 5px solid transparent;
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+    transform: rotate(45deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper span{
+    position: absolute;
+    left: 50%;
+    width: 40%;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    transform-origin: left;
+    animation: animate 3s linear infinite;
+}
+.wrapper span::after{
+    content: '';
+    position: absolute;
+    top: -2.5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    animation: animateColor 3s infinite;
+    margin: -25px;
+}
+
+@keyframes animate{
+    0%{transform: rotate(135deg);}
+    100%{transform: rotate(315deg);}
+}
+@keyframes animateColor{
+    0%{background-color: black;}
+    20%{background-color: black;}
+    40%{background-color:green;}
+    60%{background-color:green;}
+    80%{background-color: red;}
+    100%{background-color: red;}
+}
